@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="TH3-fH-Xtf">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--MapKit Demo-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u61-Kb-kJE">
+                                <rect key="frame" x="121" y="179" width="79" height="30"/>
+                                <state key="normal" title="My location"/>
+                                <connections>
+                                    <segue destination="fXa-kF-ocy" kind="push" id="VF1-PI-3As"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ltf-cB-Cdn">
+                                <rect key="frame" x="109" y="239" width="102" height="30"/>
+                                <state key="normal" title="Other Location"/>
+                                <connections>
+                                    <segue destination="naB-bz-pal" kind="push" id="jd1-Ah-Mcz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ak-uY-lyO">
+                                <rect key="frame" x="105" y="299" width="111" height="30"/>
+                                <state key="normal" title="Search Location"/>
+                                <connections>
+                                    <segue destination="85l-cY-Ymt" kind="push" id="XSt-9p-iJc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xnk-VV-eYv">
+                                <rect key="frame" x="114" y="359" width="92" height="30"/>
+                                <state key="normal" title="Search Route"/>
+                                <connections>
+                                    <segue destination="CSb-h4-EcV" kind="push" id="gpY-Sd-Tsa"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Xnk-VV-eYv" firstAttribute="top" secondItem="5ak-uY-lyO" secondAttribute="bottom" constant="30" id="2wG-lv-I3R"/>
+                            <constraint firstItem="ltf-cB-Cdn" firstAttribute="top" secondItem="u61-Kb-kJE" secondAttribute="bottom" constant="30" id="9Ur-4C-TsQ"/>
+                            <constraint firstItem="u61-Kb-kJE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HCr-bm-Sqf"/>
+                            <constraint firstItem="5ak-uY-lyO" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="30" id="J3c-3g-qZJ"/>
+                            <constraint firstItem="Xnk-VV-eYv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="N1p-UO-Epo"/>
+                            <constraint firstItem="5ak-uY-lyO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Puc-EP-fSY"/>
+                            <constraint firstItem="ltf-cB-Cdn" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-30" id="YKP-ar-DKL"/>
+                            <constraint firstItem="ltf-cB-Cdn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bef-RQ-aQ4"/>
+                            <constraint firstItem="u61-Kb-kJE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="67" id="daP-22-32p"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="daP-22-32p"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="MapKit Demo" id="cLi-Eq-Lu1"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="728" y="377"/>
+        </scene>
+        <!--SearchRoute-->
+        <scene sceneID="Qus-4x-3dX">
+            <objects>
+                <viewController id="CSb-h4-EcV" customClass="SearchRouteController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UGQ-Z4-u4w"/>
+                        <viewControllerLayoutGuide type="bottom" id="Llp-G3-y72"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gQq-IH-xaH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="eUr-We-zGy">
+                                <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="VP9-B9-5jr"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="CSb-h4-EcV" id="eLo-fr-Z7U"/>
+                                </connections>
+                            </searchBar>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="8fY-YT-ros">
+                                <rect key="frame" x="0.0" y="159" width="320" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="T5e-yU-AVq"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="fXa-kF-ocy" id="cP8-yd-T85"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eUr-We-zGy" firstAttribute="top" secondItem="UGQ-Z4-u4w" secondAttribute="bottom" id="887-99-Egm"/>
+                            <constraint firstAttribute="trailing" secondItem="8fY-YT-ros" secondAttribute="trailing" id="CRQ-oF-6gk"/>
+                            <constraint firstItem="8fY-YT-ros" firstAttribute="leading" secondItem="gQq-IH-xaH" secondAttribute="leading" id="HVx-1u-fXc"/>
+                            <constraint firstItem="8fY-YT-ros" firstAttribute="centerY" secondItem="gQq-IH-xaH" secondAttribute="centerY" id="ZXm-ze-f0I"/>
+                            <constraint firstItem="eUr-We-zGy" firstAttribute="leading" secondItem="gQq-IH-xaH" secondAttribute="leading" id="cfJ-6d-6i9"/>
+                            <constraint firstAttribute="trailing" secondItem="eUr-We-zGy" secondAttribute="trailing" id="e7y-tG-n0t"/>
+                            <constraint firstItem="8fY-YT-ros" firstAttribute="centerX" secondItem="gQq-IH-xaH" secondAttribute="centerX" id="oem-ts-GcY"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="oem-ts-GcY"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="SearchRoute" id="Sor-fJ-Rls"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="gMapView" destination="8fY-YT-ros" id="frl-ew-EAg"/>
+                        <outlet property="gSearchBar" destination="eUr-We-zGy" id="hzi-pp-0Wr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wcc-QZ-Gjk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="706" y="1134"/>
+        </scene>
+        <!--Search Location-->
+        <scene sceneID="bYE-pq-v69">
+            <objects>
+                <viewController id="85l-cY-Ymt" customClass="SearchLocationController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hXY-m3-AEW"/>
+                        <viewControllerLayoutGuide type="bottom" id="A3A-Ix-Jez"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KPl-hJ-Ci2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="xvf-vf-jyU">
+                                <rect key="frame" x="0.0" y="159" width="320" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="O7w-Ar-wxn"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="fXa-kF-ocy" id="9DT-pq-gOI"/>
+                                </connections>
+                            </mapView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="tA8-oj-ZBV">
+                                <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="85l-cY-Ymt" id="N4f-pm-Jfe"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xvf-vf-jyU" firstAttribute="leading" secondItem="KPl-hJ-Ci2" secondAttribute="leading" id="Aoa-H0-AIS"/>
+                            <constraint firstItem="tA8-oj-ZBV" firstAttribute="top" secondItem="hXY-m3-AEW" secondAttribute="bottom" id="Fh6-0F-gph"/>
+                            <constraint firstItem="xvf-vf-jyU" firstAttribute="centerX" secondItem="KPl-hJ-Ci2" secondAttribute="centerX" id="Q7d-GB-eDy"/>
+                            <constraint firstAttribute="trailing" secondItem="xvf-vf-jyU" secondAttribute="trailing" id="U1w-Zx-bmX"/>
+                            <constraint firstAttribute="trailing" secondItem="tA8-oj-ZBV" secondAttribute="trailing" id="dDM-fY-XHT"/>
+                            <constraint firstItem="tA8-oj-ZBV" firstAttribute="leading" secondItem="KPl-hJ-Ci2" secondAttribute="leading" id="dRz-Nx-JeS"/>
+                            <constraint firstItem="xvf-vf-jyU" firstAttribute="centerY" secondItem="KPl-hJ-Ci2" secondAttribute="centerY" id="j8Z-wb-0RN"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Search Location" id="w9p-Nz-51N"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="gMapView" destination="xvf-vf-jyU" id="mtb-Y5-LM6"/>
+                        <outlet property="gSearchBar" destination="tA8-oj-ZBV" id="XJ4-YM-0Eh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dyf-Mi-gSt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1165" y="1134"/>
+        </scene>
+        <!--My Location-->
+        <scene sceneID="7rq-yW-Sd3">
+            <objects>
+                <viewController id="fXa-kF-ocy" customClass="MyLocationController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZRO-he-dLj"/>
+                        <viewControllerLayoutGuide type="bottom" id="ysW-fY-zLh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TgB-4S-hbh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="85k-GR-PXN">
+                                <rect key="frame" x="0.0" y="159" width="320" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="khz-ak-Rdu"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="fXa-kF-ocy" id="UJd-yL-1s2"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="85k-GR-PXN" firstAttribute="centerY" secondItem="TgB-4S-hbh" secondAttribute="centerY" id="JnK-yB-yVq"/>
+                            <constraint firstItem="85k-GR-PXN" firstAttribute="leading" secondItem="TgB-4S-hbh" secondAttribute="leading" id="Kyb-6p-2n1"/>
+                            <constraint firstAttribute="trailing" secondItem="85k-GR-PXN" secondAttribute="trailing" id="uaz-5Y-kWd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="My Location" id="7gJ-8n-mWh"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="gMapView" destination="85k-GR-PXN" id="7ca-yZ-snB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="er8-2c-57F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1165" y="-248"/>
+        </scene>
+        <!--Other Location-->
+        <scene sceneID="hlw-hO-Zar">
+            <objects>
+                <viewController id="naB-bz-pal" customClass="OtherLocationController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="a6d-NO-DhG"/>
+                        <viewControllerLayoutGuide type="bottom" id="EDa-kz-yAv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7Mu-g4-SFr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="2cE-g2-PNs">
+                                <rect key="frame" x="0.0" y="159" width="320" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="2g3-ZR-fhR"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="fXa-kF-ocy" id="F5y-pg-lFZ"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="2cE-g2-PNs" secondAttribute="trailing" id="3VH-8T-Fv7"/>
+                            <constraint firstItem="2cE-g2-PNs" firstAttribute="leading" secondItem="7Mu-g4-SFr" secondAttribute="leading" id="Dwp-Rd-CfM"/>
+                            <constraint firstItem="2cE-g2-PNs" firstAttribute="centerY" secondItem="7Mu-g4-SFr" secondAttribute="centerY" id="Gnp-bh-3w0"/>
+                            <constraint firstItem="2cE-g2-PNs" firstAttribute="centerX" secondItem="7Mu-g4-SFr" secondAttribute="centerX" id="VFT-bl-ktg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Other Location" id="H7u-aj-Wfl"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="gMapView" destination="2cE-g2-PNs" id="OUm-PZ-t4V"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MDa-AH-y5p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1165" y="399"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="QXO-Rh-iN5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TH3-fH-Xtf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QyC-6e-itU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="xa4-gu-UqC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8fe-44-Rpu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="340" y="377"/>
+        </scene>
+    </scenes>
+</document>
