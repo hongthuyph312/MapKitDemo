@@ -49,31 +49,31 @@
     locationManager.delegate = self;
     locationManager.distanceFilter = kCLDistanceFilterNone;
     locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-    [locationManager requestAlwaysAuthorization];
-    [locationManager startUpdatingLocation];
+//    [locationManager requestAlwaysAuthorization];
+//    [locationManager startUpdatingLocation];
     _gMapView.showsUserLocation = YES;
     _gMapView.delegate = self;
     CLLocationCoordinate2D currentLocation =  locationManager.location.coordinate;
     CLLocationCoordinate2D location = {21.037340,105.835257};
     [self drawLineRouteFrom:currentLocation To:location];
    
-    if ([CLLocationManager locationServicesEnabled]){
-        NSLog(@"Location Services Enabled");
-        if ([CLLocationManager authorizationStatus]==kCLAuthorizationStatusDenied){
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"App Permission Denied"
-                                               message:@"To re-enable, please go to Settings and turn on Location Service for this app."
-                                              delegate:nil
-                                     cancelButtonTitle:@"OK"
-                                     otherButtonTitles:nil];
-            [alert show];
-        }else if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusAuthorized){
-                    NSLog(@"enabled location");
-        }else if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusNotDetermined){
-            NSLog(@"not determine");
-        }else if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusAuthorizedWhenInUse){
-            NSLog(@"when determine");
-        }
-    }
+//    if ([CLLocationManager locationServicesEnabled]){
+//        NSLog(@"Location Services Enabled");
+//        if ([CLLocationManager authorizationStatus]==kCLAuthorizationStatusDenied){
+//            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"App Permission Denied"
+//                                               message:@"To re-enable, please go to Settings and turn on Location Service for this app."
+//                                              delegate:nil
+//                                     cancelButtonTitle:@"OK"
+//                                     otherButtonTitles:nil];
+//            [alert show];
+//        }else if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusAuthorized){
+//                    NSLog(@"enabled location");
+//        }else if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusNotDetermined){
+//            NSLog(@"not determine");
+//        }else if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusAuthorizedWhenInUse){
+//            NSLog(@"when determine");
+//        }
+//    }
 }
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
