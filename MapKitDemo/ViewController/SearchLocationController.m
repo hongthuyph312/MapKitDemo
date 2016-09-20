@@ -29,7 +29,6 @@
     CLGeocoder *geocoder = [[CLGeocoder alloc] init];
     [geocoder geocodeAddressString:_gSearchBar.text completionHandler:^(NSArray *placemarks, NSError *error) {
         //Error checking
-        
         CLPlacemark *placemark = [placemarks objectAtIndex:0];
         if (!placemark) {
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"No result" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
@@ -38,12 +37,9 @@
         }
         MKCoordinateRegion region;
         region.center = placemark.location.coordinate;
-        
         MKCoordinateSpan span = {0.005,0.005};
-        
         region.span = span;
         [_gMapView setRegion:region animated:YES];
-        
         MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
         annotation.coordinate = region.center;
         annotation.title = _gSearchBar.text;

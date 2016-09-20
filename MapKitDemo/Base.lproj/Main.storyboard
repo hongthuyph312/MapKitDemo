@@ -94,10 +94,15 @@
                                 </connections>
                             </searchBar>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="8fY-YT-ros">
-                                <rect key="frame" x="0.0" y="159" width="320" height="250"/>
+                                <rect key="frame" x="0.0" y="108" width="320" height="460"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="T5e-yU-AVq"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="T5e-yU-AVq"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <outlet property="delegate" destination="fXa-kF-ocy" id="cP8-yd-T85"/>
                                 </connections>
@@ -107,14 +112,17 @@
                         <constraints>
                             <constraint firstItem="eUr-We-zGy" firstAttribute="top" secondItem="UGQ-Z4-u4w" secondAttribute="bottom" id="887-99-Egm"/>
                             <constraint firstAttribute="trailing" secondItem="8fY-YT-ros" secondAttribute="trailing" id="CRQ-oF-6gk"/>
+                            <constraint firstItem="Llp-G3-y72" firstAttribute="top" secondItem="8fY-YT-ros" secondAttribute="bottom" id="CZx-Jy-3Xs"/>
                             <constraint firstItem="8fY-YT-ros" firstAttribute="leading" secondItem="gQq-IH-xaH" secondAttribute="leading" id="HVx-1u-fXc"/>
                             <constraint firstItem="8fY-YT-ros" firstAttribute="centerY" secondItem="gQq-IH-xaH" secondAttribute="centerY" id="ZXm-ze-f0I"/>
+                            <constraint firstItem="8fY-YT-ros" firstAttribute="top" secondItem="eUr-We-zGy" secondAttribute="bottom" id="c1y-qq-3S3"/>
                             <constraint firstItem="eUr-We-zGy" firstAttribute="leading" secondItem="gQq-IH-xaH" secondAttribute="leading" id="cfJ-6d-6i9"/>
                             <constraint firstAttribute="trailing" secondItem="eUr-We-zGy" secondAttribute="trailing" id="e7y-tG-n0t"/>
                             <constraint firstItem="8fY-YT-ros" firstAttribute="centerX" secondItem="gQq-IH-xaH" secondAttribute="centerX" id="oem-ts-GcY"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="ZXm-ze-f0I"/>
                                 <exclude reference="oem-ts-GcY"/>
                             </mask>
                         </variation>
@@ -143,10 +151,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="xvf-vf-jyU">
-                                <rect key="frame" x="0.0" y="159" width="320" height="250"/>
+                                <rect key="frame" x="0.0" y="108" width="320" height="460"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="O7w-Ar-wxn"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="O7w-Ar-wxn"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <outlet property="delegate" destination="fXa-kF-ocy" id="9DT-pq-gOI"/>
                                 </connections>
@@ -161,6 +174,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="xvf-vf-jyU" firstAttribute="top" secondItem="tA8-oj-ZBV" secondAttribute="bottom" id="6qV-SA-xNT"/>
                             <constraint firstItem="xvf-vf-jyU" firstAttribute="leading" secondItem="KPl-hJ-Ci2" secondAttribute="leading" id="Aoa-H0-AIS"/>
                             <constraint firstItem="tA8-oj-ZBV" firstAttribute="top" secondItem="hXY-m3-AEW" secondAttribute="bottom" id="Fh6-0F-gph"/>
                             <constraint firstItem="xvf-vf-jyU" firstAttribute="centerX" secondItem="KPl-hJ-Ci2" secondAttribute="centerX" id="Q7d-GB-eDy"/>
@@ -168,7 +182,13 @@
                             <constraint firstAttribute="trailing" secondItem="tA8-oj-ZBV" secondAttribute="trailing" id="dDM-fY-XHT"/>
                             <constraint firstItem="tA8-oj-ZBV" firstAttribute="leading" secondItem="KPl-hJ-Ci2" secondAttribute="leading" id="dRz-Nx-JeS"/>
                             <constraint firstItem="xvf-vf-jyU" firstAttribute="centerY" secondItem="KPl-hJ-Ci2" secondAttribute="centerY" id="j8Z-wb-0RN"/>
+                            <constraint firstItem="A3A-Ix-Jez" firstAttribute="top" secondItem="xvf-vf-jyU" secondAttribute="bottom" id="xXe-te-qtV"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="j8Z-wb-0RN"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Search Location" id="w9p-Nz-51N"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
@@ -194,10 +214,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="85k-GR-PXN">
-                                <rect key="frame" x="0.0" y="159" width="320" height="250"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="khz-ak-Rdu"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="khz-ak-Rdu"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <outlet property="delegate" destination="fXa-kF-ocy" id="UJd-yL-1s2"/>
                                 </connections>
@@ -205,10 +230,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ysW-fY-zLh" firstAttribute="top" secondItem="85k-GR-PXN" secondAttribute="bottom" id="AP9-76-OnD"/>
+                            <constraint firstItem="85k-GR-PXN" firstAttribute="top" secondItem="ZRO-he-dLj" secondAttribute="bottom" id="GQC-PY-8wX"/>
                             <constraint firstItem="85k-GR-PXN" firstAttribute="centerY" secondItem="TgB-4S-hbh" secondAttribute="centerY" id="JnK-yB-yVq"/>
                             <constraint firstItem="85k-GR-PXN" firstAttribute="leading" secondItem="TgB-4S-hbh" secondAttribute="leading" id="Kyb-6p-2n1"/>
                             <constraint firstAttribute="trailing" secondItem="85k-GR-PXN" secondAttribute="trailing" id="uaz-5Y-kWd"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="JnK-yB-yVq"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="My Location" id="7gJ-8n-mWh"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
@@ -233,10 +265,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="2cE-g2-PNs">
-                                <rect key="frame" x="0.0" y="159" width="320" height="250"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="2g3-ZR-fhR"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="2g3-ZR-fhR"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <outlet property="delegate" destination="fXa-kF-ocy" id="F5y-pg-lFZ"/>
                                 </connections>
@@ -247,8 +284,15 @@
                             <constraint firstAttribute="trailing" secondItem="2cE-g2-PNs" secondAttribute="trailing" id="3VH-8T-Fv7"/>
                             <constraint firstItem="2cE-g2-PNs" firstAttribute="leading" secondItem="7Mu-g4-SFr" secondAttribute="leading" id="Dwp-Rd-CfM"/>
                             <constraint firstItem="2cE-g2-PNs" firstAttribute="centerY" secondItem="7Mu-g4-SFr" secondAttribute="centerY" id="Gnp-bh-3w0"/>
+                            <constraint firstItem="2cE-g2-PNs" firstAttribute="top" secondItem="a6d-NO-DhG" secondAttribute="bottom" id="MrG-EW-D4w"/>
                             <constraint firstItem="2cE-g2-PNs" firstAttribute="centerX" secondItem="7Mu-g4-SFr" secondAttribute="centerX" id="VFT-bl-ktg"/>
+                            <constraint firstItem="EDa-kz-yAv" firstAttribute="top" secondItem="2cE-g2-PNs" secondAttribute="bottom" id="yEc-Kd-5DY"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Gnp-bh-3w0"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Other Location" id="H7u-aj-Wfl"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>

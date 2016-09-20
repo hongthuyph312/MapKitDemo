@@ -27,7 +27,6 @@
     MKCoordinateRegion region;
     region.span = span;
     region.center = location;
-    
     [_gMapView setRegion:region animated:YES];
     
     // Add an annotation
