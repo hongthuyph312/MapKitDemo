@@ -34,26 +34,6 @@
 //    [locationManager startUpdatingLocation];
 
     currentLocation =  locationManager.location.coordinate;
-//    CLLocationCoordinate2D location = {21.037340,105.835257};
-//    [self drawLineRouteFrom:currentLocation To:location];
-   
-//    if ([CLLocationManager locationServicesEnabled]){
-//        NSLog(@"Location Services Enabled");
-//        if ([CLLocationManager authorizationStatus]==kCLAuthorizationStatusDenied){
-//            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"App Permission Denied"
-//                                               message:@"To re-enable, please go to Settings and turn on Location Service for this app."
-//                                              delegate:nil
-//                                     cancelButtonTitle:@"OK"
-//                                     otherButtonTitles:nil];
-//            [alert show];
-//        }else if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusAuthorized){
-//                    NSLog(@"enabled location");
-//        }else if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusNotDetermined){
-//            NSLog(@"not determine");
-//        }else if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusAuthorizedWhenInUse){
-//            NSLog(@"when determine");
-//        }
-//    }
 }
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
@@ -74,7 +54,6 @@
         }
         MKCoordinateRegion region;
         region.center = placemark.location.coordinate;
-//        [_gMapView setRegion:region animated:YES];
         MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
         annotation.coordinate = region.center;
         annotation.title = _gSearchBar.text;
@@ -139,7 +118,6 @@
     
     [mapView setRegion:region animated:YES];
 }
-
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
 {

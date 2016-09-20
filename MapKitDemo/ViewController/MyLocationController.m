@@ -9,9 +9,6 @@
 #import "MyLocationController.h"
 
 @interface MyLocationController ()
-{
-    CLLocationManager *myLocation;
-}
 
 @end
 
@@ -22,32 +19,11 @@
     // Do any additional setup after loading the view.
     _gMapView.showsUserLocation = YES;
     _gMapView.delegate = self;
-    
-    
-//    myLocation = [[CLLocationManager alloc] init];
-//    myLocation.delegate = self;
-//    myLocation.desiredAccuracy = kCLLocationAccuracyBest;
-//    [myLocation startUpdatingLocation];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-#pragma mark CLLocationManagerDelegate
-
-- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
-{
-    NSLog(@"didFailWithError: %@", error);
-    UIAlertView *errorAlert = [[UIAlertView alloc]
-                               initWithTitle:@"Error" message:@"Failed to Get Your Location" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-    [errorAlert show];
-}
-
-- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations
-{
-//    NSLog(@"%@",locations);
 }
 
 #pragma mark MKMapViewDelegate

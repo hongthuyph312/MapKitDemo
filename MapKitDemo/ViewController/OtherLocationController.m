@@ -20,6 +20,7 @@
     
     //21.007486,105.840736
     _gMapView.showsUserLocation = YES;
+    _gMapView.delegate = self;
     
     MKCoordinateSpan span = {0.05,0.05};
     CLLocationCoordinate2D location = {21.007486,105.840736};
