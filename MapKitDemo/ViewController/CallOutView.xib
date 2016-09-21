@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CallOutView">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="45"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="58C-7b-xYJ">
+                    <rect key="frame" x="8" y="12" width="20" height="20"/>
+                    <color key="backgroundColor" red="0.56470588239999997" green="0.88235294119999996" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="58C-7b-xYJ" secondAttribute="height" multiplier="1:1" id="Ty5-WC-RIC"/>
+                        <constraint firstAttribute="width" constant="20" id="lep-5P-Pz4"/>
+                        <constraint firstAttribute="height" constant="20" id="w7H-kM-wRi"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="Ty5-WC-RIC"/>
+                        </mask>
+                    </variation>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tId-51-9qX">
+                    <rect key="frame" x="36" y="15" width="56" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="0.86274509799999999" green="0.1137254902" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="58C-7b-xYJ" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="28Y-jX-ati"/>
+                <constraint firstItem="58C-7b-xYJ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="12" id="GfN-GC-cGm"/>
+                <constraint firstAttribute="bottom" secondItem="58C-7b-xYJ" secondAttribute="bottom" constant="13" id="Jen-f9-RaJ"/>
+                <constraint firstItem="tId-51-9qX" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="TSf-20-Dit"/>
+                <constraint firstItem="58C-7b-xYJ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="V9w-iM-hdr"/>
+                <constraint firstItem="tId-51-9qX" firstAttribute="leading" secondItem="58C-7b-xYJ" secondAttribute="trailing" constant="8" id="ijs-Vw-mQq"/>
+                <constraint firstAttribute="trailing" secondItem="tId-51-9qX" secondAttribute="trailing" constant="8" id="wtm-sm-3F2"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="GfN-GC-cGm"/>
+                    <exclude reference="Jen-f9-RaJ"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="gImgIcon" destination="58C-7b-xYJ" id="e4V-xb-bdV"/>
+                <outlet property="gLbTitle" destination="tId-51-9qX" id="8Tn-tb-Gfm"/>
+            </connections>
+            <point key="canvasLocation" x="180" y="146.5"/>
+        </view>
+    </objects>
+</document>

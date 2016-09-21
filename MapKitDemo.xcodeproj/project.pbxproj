@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B0FB1EE1D92379800CB1A81 /* CustomAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0FB1ED1D92379800CB1A81 /* CustomAnnotationView.m */; };
+		8B0FB1F01D9237BB00CB1A81 /* CallOutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B0FB1EF1D9237BB00CB1A81 /* CallOutView.xib */; };
+		8B0FB1F31D923C2200CB1A81 /* CallOutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0FB1F21D923C2200CB1A81 /* CallOutView.m */; };
+		8B0FB1F61D92445A00CB1A81 /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0FB1F51D92445A00CB1A81 /* Common.m */; };
 		8BB2F4FE1D879C7B00D70115 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB2F4FD1D879C7B00D70115 /* main.m */; };
 		8BB2F5011D879C7B00D70115 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB2F5001D879C7B00D70115 /* AppDelegate.m */; };
 		8BB2F5071D879C7B00D70115 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BB2F5051D879C7B00D70115 /* Main.storyboard */; };
@@ -22,9 +26,17 @@
 		8BB2F5271D87DF5400D70115 /* SearchLocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB2F5261D87DF5400D70115 /* SearchLocationController.m */; };
 		8BB2F52A1D87DF6100D70115 /* SearchRouteController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB2F5291D87DF6100D70115 /* SearchRouteController.m */; };
 		8BB2F52D1D87E65400D70115 /* ico_place@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BB2F52C1D87E65400D70115 /* ico_place@2x.png */; };
+		8BD26BE71D927E550055ED2A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BD26BE61D927E550055ED2A /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8B0FB1EC1D92379800CB1A81 /* CustomAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAnnotationView.h; sourceTree = "<group>"; };
+		8B0FB1ED1D92379800CB1A81 /* CustomAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAnnotationView.m; sourceTree = "<group>"; };
+		8B0FB1EF1D9237BB00CB1A81 /* CallOutView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CallOutView.xib; sourceTree = "<group>"; };
+		8B0FB1F11D923C2200CB1A81 /* CallOutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallOutView.h; sourceTree = "<group>"; };
+		8B0FB1F21D923C2200CB1A81 /* CallOutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CallOutView.m; sourceTree = "<group>"; };
+		8B0FB1F41D92445900CB1A81 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		8B0FB1F51D92445A00CB1A81 /* Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Common.m; sourceTree = "<group>"; };
 		8BA062161D8B9C67002E2A47 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		8BB2F4F91D879C7B00D70115 /* MapKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BB2F4FD1D879C7B00D70115 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -49,6 +61,8 @@
 		8BB2F5281D87DF6100D70115 /* SearchRouteController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchRouteController.h; sourceTree = "<group>"; };
 		8BB2F5291D87DF6100D70115 /* SearchRouteController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchRouteController.m; sourceTree = "<group>"; };
 		8BB2F52C1D87E65400D70115 /* ico_place@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ico_place@2x.png"; sourceTree = "<group>"; };
+		8BD26BE61D927E550055ED2A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		8BFF3F8F1D9228BD0008E4B6 /* MapKitDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MapKitDemo-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +113,9 @@
 				8BB2F50A1D879C7B00D70115 /* LaunchScreen.storyboard */,
 				8BB2F50D1D879C7B00D70115 /* Info.plist */,
 				8BB2F4FC1D879C7B00D70115 /* Supporting Files */,
+				8BFF3F8F1D9228BD0008E4B6 /* MapKitDemo-Prefix.pch */,
+				8B0FB1F41D92445900CB1A81 /* Common.h */,
+				8B0FB1F51D92445A00CB1A81 /* Common.m */,
 			);
 			path = MapKitDemo;
 			sourceTree = "<group>";
@@ -124,6 +141,11 @@
 				8BB2F5261D87DF5400D70115 /* SearchLocationController.m */,
 				8BB2F5281D87DF6100D70115 /* SearchRouteController.h */,
 				8BB2F5291D87DF6100D70115 /* SearchRouteController.m */,
+				8B0FB1EC1D92379800CB1A81 /* CustomAnnotationView.h */,
+				8B0FB1ED1D92379800CB1A81 /* CustomAnnotationView.m */,
+				8B0FB1EF1D9237BB00CB1A81 /* CallOutView.xib */,
+				8B0FB1F11D923C2200CB1A81 /* CallOutView.h */,
+				8B0FB1F21D923C2200CB1A81 /* CallOutView.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -131,6 +153,7 @@
 		8BB2F52B1D87E64900D70115 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8BD26BE61D927E550055ED2A /* Default-568h@2x.png */,
 				8BB2F52C1D87E65400D70115 /* ico_place@2x.png */,
 			);
 			path = Resources;
@@ -195,8 +218,10 @@
 			files = (
 				8BB2F52D1D87E65400D70115 /* ico_place@2x.png in Resources */,
 				8BB2F50C1D879C7B00D70115 /* LaunchScreen.storyboard in Resources */,
+				8B0FB1F01D9237BB00CB1A81 /* CallOutView.xib in Resources */,
 				8BB2F5091D879C7B00D70115 /* Assets.xcassets in Resources */,
 				8BB2F5071D879C7B00D70115 /* Main.storyboard in Resources */,
+				8BD26BE71D927E550055ED2A /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,9 +234,12 @@
 			files = (
 				8BB2F52A1D87DF6100D70115 /* SearchRouteController.m in Sources */,
 				8BB2F5271D87DF5400D70115 /* SearchLocationController.m in Sources */,
+				8B0FB1F61D92445A00CB1A81 /* Common.m in Sources */,
+				8B0FB1EE1D92379800CB1A81 /* CustomAnnotationView.m in Sources */,
 				8BB2F5241D87DF4700D70115 /* OtherLocationController.m in Sources */,
 				8BB2F5211D87DF3500D70115 /* MyLocationController.m in Sources */,
 				8BB2F5011D879C7B00D70115 /* AppDelegate.m in Sources */,
+				8B0FB1F31D923C2200CB1A81 /* CallOutView.m in Sources */,
 				8BB2F51E1D87DF2000D70115 /* ViewController.m in Sources */,
 				8BB2F4FE1D879C7B00D70115 /* main.m in Sources */,
 			);
@@ -329,7 +357,10 @@
 					armv7,
 				);
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				ENABLE_NS_ASSERTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/MapKitDemo-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "";
 				INFOPLIST_FILE = MapKitDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -348,7 +379,10 @@
 					armv7,
 				);
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				ENABLE_NS_ASSERTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/MapKitDemo-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "";
 				INFOPLIST_FILE = MapKitDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

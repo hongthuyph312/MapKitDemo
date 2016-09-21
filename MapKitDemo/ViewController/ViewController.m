@@ -2,7 +2,7 @@
 //  ViewController.m
 //  MapKitDemo
 //
-//  Created by NgocNK on 9/13/16.
+//  Created by ThuyPH on 9/13/16.
 //  Copyright © 2016 themask. All rights reserved.
 //
 

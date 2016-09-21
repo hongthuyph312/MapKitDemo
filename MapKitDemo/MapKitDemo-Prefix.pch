@@ -1,0 +1,17 @@
+//
+//  MapKitDemo-Prefix.pch
+//  MapKitDemo
+//
+//  Created by ThuyPH on 9/21/16.
+//  Copyright © 2016 themask. All rights reserved.
+//
+
+#ifndef MapKitDemo_Prefix_pch
+#define MapKitDemo_Prefix_pch
+#define SYSTEM_VERSION [[[UIDevice currentDevice] systemVersion] floatValue]
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#import "Common.h"
+
+#endif /* MapKitDemo_Prefix_pch */
+

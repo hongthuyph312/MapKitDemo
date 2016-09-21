@@ -2,12 +2,13 @@
 //  SearchRouteController.m
 //  MapKitDemo
 //
-//  Created by NgocNK on 9/13/16.
+//  Created by ThuyPH on 9/13/16.
 //  Copyright © 2016 themask. All rights reserved.
 //
 
 #import "SearchRouteController.h"
 #import <MapKit/MapKit.h>
+#import "CustomAnnotationView.h"
 
 
 @interface SearchRouteController ()
@@ -26,14 +27,26 @@
     
     _gMapView.showsUserLocation = YES;
     _gMapView.delegate = self;
+    
     locationManager = [[CLLocationManager alloc] init];
     locationManager.delegate = self;
     locationManager.distanceFilter = kCLDistanceFilterNone;
     locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-//    [locationManager requestAlwaysAuthorization];
-//    [locationManager startUpdatingLocation];
-
+    if (SYSTEM_VERSION > 7.0) {
+        [locationManager requestAlwaysAuthorization];
+        [locationManager startUpdatingLocation];
+    }
     currentLocation =  locationManager.location.coordinate;
+    
+    if([CLLocationManager locationServicesEnabled] &&
+       [CLLocationManager authorizationStatus] != kCLAuthorizationStatusDenied)
+    {
+        
+    }else
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"App Permission Denied" message:@"To re-enable, please go to Settings and turn on Location Service for this app." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+    }
 }
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
@@ -61,11 +74,6 @@
         
         [self drawLineRouteFrom:currentLocation To:annotation.coordinate];
     }];
-}
-
-- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
-    NSLog(@"OldLocation %f %f", oldLocation.coordinate.latitude, oldLocation.coordinate.longitude);
-    NSLog(@"NewLocation %f %f", newLocation.coordinate.latitude, newLocation.coordinate.longitude);
 }
 
 - (void) drawLineRouteFrom:(CLLocationCoordinate2D) sourceLocation To:(CLLocationCoordinate2D) destinationLocation
@@ -125,17 +133,35 @@
         return nil;
     }
     
-    static NSString * const identifier = @"MyCustomAnnotation";
-    MKAnnotationView *annotationView = [_gMapView dequeueReusableAnnotationViewWithIdentifier:identifier];
+    static NSString * const identifier = @"CustomAnnotationView";
+    CustomAnnotationView *annotationView = (CustomAnnotationView*)[_gMapView dequeueReusableAnnotationViewWithIdentifier:identifier];
     if (annotationView) {
-        annotationView.annotation = annotation;
+        [annotationView updateAnnotation:annotation];
     }else
     {
-        annotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier];
+        annotationView = [[CustomAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier andPinImage:[UIImage imageNamed:@"ico_place"]];
     }
-    annotationView.image = [UIImage imageNamed:@"ico_place"];
     annotationView.centerOffset = CGPointMake(0, -29/2);
     return annotationView;
+}
+
+- (void)mapView:(MKMapView *)mapView didDeselectAnnotationView:(nonnull MKAnnotationView *)view
+{
+    if ([view isKindOfClass:[CustomAnnotationView class]]) {
+        [((CustomAnnotationView *)view) hideCallOutView];
+    }
+}
+
+- (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view
+{
+    if ([view isKindOfClass:[CustomAnnotationView class]]) {
+        [((CustomAnnotationView*) view) showCallOutView];
+    }
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"prefs:root=LOCATION_SERVICES"]];
 }
 
 - (void)didReceiveMemoryWarning {
