@@ -29,21 +29,24 @@
     CLGeocoder *geocoder = [[CLGeocoder alloc] init];
     [geocoder geocodeAddressString:_gSearchBar.text completionHandler:^(NSArray *placemarks, NSError *error) {
         //Error checking
-        CLPlacemark *placemark = [placemarks objectAtIndex:0];
-        if (!placemark) {
+        if (!placemarks || placemarks.count == 0) {
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"No result" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
             [alert show];
             return ;
         }
-        MKCoordinateRegion region;
-        region.center = placemark.location.coordinate;
-        MKCoordinateSpan span = {0.005,0.005};
-        region.span = span;
-        [_gMapView setRegion:region animated:YES];
-        MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
-        annotation.coordinate = region.center;
-        annotation.title = _gSearchBar.text;
-        [_gMapView addAnnotation:annotation];
+        
+        for (int i = 0; i < placemarks.count; i++) {
+            CLPlacemark *placemark = [placemarks objectAtIndex:i];
+            MKCoordinateRegion region;
+            region.center = placemark.location.coordinate;
+            MKCoordinateSpan span = {0.01,0.01};
+            region.span = span;
+            [_gMapView setRegion:region animated:YES];
+            MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
+            annotation.coordinate = region.center;
+            annotation.title = _gSearchBar.text;
+            [_gMapView addAnnotation:annotation];
+        }
     }];
 }
 /*

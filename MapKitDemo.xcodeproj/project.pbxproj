@@ -11,6 +11,7 @@
 		8B0FB1F01D9237BB00CB1A81 /* CallOutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B0FB1EF1D9237BB00CB1A81 /* CallOutView.xib */; };
 		8B0FB1F31D923C2200CB1A81 /* CallOutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0FB1F21D923C2200CB1A81 /* CallOutView.m */; };
 		8B0FB1F61D92445A00CB1A81 /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0FB1F51D92445A00CB1A81 /* Common.m */; };
+		8B3EC0941D93802D001F3E9D /* sfdf.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3EC0931D93802D001F3E9D /* sfdf.m */; };
 		8BB2F4FE1D879C7B00D70115 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB2F4FD1D879C7B00D70115 /* main.m */; };
 		8BB2F5011D879C7B00D70115 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB2F5001D879C7B00D70115 /* AppDelegate.m */; };
 		8BB2F5071D879C7B00D70115 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BB2F5051D879C7B00D70115 /* Main.storyboard */; };
@@ -37,6 +38,8 @@
 		8B0FB1F21D923C2200CB1A81 /* CallOutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CallOutView.m; sourceTree = "<group>"; };
 		8B0FB1F41D92445900CB1A81 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		8B0FB1F51D92445A00CB1A81 /* Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Common.m; sourceTree = "<group>"; };
+		8B3EC0921D93802D001F3E9D /* sfdf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sfdf.h; sourceTree = "<group>"; };
+		8B3EC0931D93802D001F3E9D /* sfdf.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sfdf.m; sourceTree = "<group>"; };
 		8BA062161D8B9C67002E2A47 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		8BB2F4F91D879C7B00D70115 /* MapKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BB2F4FD1D879C7B00D70115 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -146,6 +149,8 @@
 				8B0FB1EF1D9237BB00CB1A81 /* CallOutView.xib */,
 				8B0FB1F11D923C2200CB1A81 /* CallOutView.h */,
 				8B0FB1F21D923C2200CB1A81 /* CallOutView.m */,
+				8B3EC0921D93802D001F3E9D /* sfdf.h */,
+				8B3EC0931D93802D001F3E9D /* sfdf.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -239,6 +244,7 @@
 				8BB2F5241D87DF4700D70115 /* OtherLocationController.m in Sources */,
 				8BB2F5211D87DF3500D70115 /* MyLocationController.m in Sources */,
 				8BB2F5011D879C7B00D70115 /* AppDelegate.m in Sources */,
+				8B3EC0941D93802D001F3E9D /* sfdf.m in Sources */,
 				8B0FB1F31D923C2200CB1A81 /* CallOutView.m in Sources */,
 				8BB2F51E1D87DF2000D70115 /* ViewController.m in Sources */,
 				8BB2F4FE1D879C7B00D70115 /* main.m in Sources */,

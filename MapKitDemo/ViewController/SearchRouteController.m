@@ -41,7 +41,7 @@
     if([CLLocationManager locationServicesEnabled] &&
        [CLLocationManager authorizationStatus] != kCLAuthorizationStatusDenied)
     {
-        
+        // Permission enabled
     }else
     {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"App Permission Denied" message:@"To re-enable, please go to Settings and turn on Location Service for this app." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
@@ -145,17 +145,17 @@
     return annotationView;
 }
 
-- (void)mapView:(MKMapView *)mapView didDeselectAnnotationView:(nonnull MKAnnotationView *)view
-{
-    if ([view isKindOfClass:[CustomAnnotationView class]]) {
-        [((CustomAnnotationView *)view) hideCallOutView];
-    }
-}
-
 - (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view
 {
     if ([view isKindOfClass:[CustomAnnotationView class]]) {
         [((CustomAnnotationView*) view) showCallOutView];
+    }
+}
+
+- (void)mapView:(MKMapView *)mapView didDeselectAnnotationView:(nonnull MKAnnotationView *)view
+{
+    if ([view isKindOfClass:[CustomAnnotationView class]]) {
+        [((CustomAnnotationView *)view) hideCallOutView];
     }
 }
 

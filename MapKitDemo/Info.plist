@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>AAAAA</string>
+	<string>Location Always Usage Description</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>When In Use Authorization Test</string>
 	<key>CFBundleDevelopmentRegion</key>
