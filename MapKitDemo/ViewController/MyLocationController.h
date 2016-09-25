@@ -9,8 +9,10 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
+#import "ChangeMapType.h"
 
 @interface MyLocationController : UIViewController<MKMapViewDelegate>
 @property (weak, nonatomic) IBOutlet MKMapView *gMapView;
+- (IBAction)changeTypeButtonClicked:(id)sender;
 
 @end

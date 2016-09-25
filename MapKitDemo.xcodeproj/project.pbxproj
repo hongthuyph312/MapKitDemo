@@ -28,6 +28,8 @@
 		8BB2F52A1D87DF6100D70115 /* SearchRouteController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB2F5291D87DF6100D70115 /* SearchRouteController.m */; };
 		8BB2F52D1D87E65400D70115 /* ico_place@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BB2F52C1D87E65400D70115 /* ico_place@2x.png */; };
 		8BD26BE71D927E550055ED2A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BD26BE61D927E550055ED2A /* Default-568h@2x.png */; };
+		D2F38E501D955A990077624C /* ChangeMapType.m in Sources */ = {isa = PBXBuildFile; fileRef = D2F38E4E1D955A990077624C /* ChangeMapType.m */; };
+		D2F38E511D955A990077624C /* ChangeMapType.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2F38E4F1D955A990077624C /* ChangeMapType.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +68,9 @@
 		8BB2F52C1D87E65400D70115 /* ico_place@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ico_place@2x.png"; sourceTree = "<group>"; };
 		8BD26BE61D927E550055ED2A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		8BFF3F8F1D9228BD0008E4B6 /* MapKitDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MapKitDemo-Prefix.pch"; sourceTree = "<group>"; };
+		D2F38E4D1D955A990077624C /* ChangeMapType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangeMapType.h; sourceTree = "<group>"; };
+		D2F38E4E1D955A990077624C /* ChangeMapType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangeMapType.m; sourceTree = "<group>"; };
+		D2F38E4F1D955A990077624C /* ChangeMapType.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChangeMapType.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +139,9 @@
 		8BB2F51B1D87DF2000D70115 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				D2F38E4D1D955A990077624C /* ChangeMapType.h */,
+				D2F38E4E1D955A990077624C /* ChangeMapType.m */,
+				D2F38E4F1D955A990077624C /* ChangeMapType.xib */,
 				8BB2F51C1D87DF2000D70115 /* ViewController.h */,
 				8BB2F51D1D87DF2000D70115 /* ViewController.m */,
 				8BB2F51F1D87DF3500D70115 /* MyLocationController.h */,
@@ -221,6 +229,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2F38E511D955A990077624C /* ChangeMapType.xib in Resources */,
 				8BB2F52D1D87E65400D70115 /* ico_place@2x.png in Resources */,
 				8BB2F50C1D879C7B00D70115 /* LaunchScreen.storyboard in Resources */,
 				8B0FB1F01D9237BB00CB1A81 /* CallOutView.xib in Resources */,
@@ -237,6 +246,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2F38E501D955A990077624C /* ChangeMapType.m in Sources */,
 				8BB2F52A1D87DF6100D70115 /* SearchRouteController.m in Sources */,
 				8BB2F5271D87DF5400D70115 /* SearchLocationController.m in Sources */,
 				8B0FB1F61D92445A00CB1A81 /* Common.m in Sources */,
