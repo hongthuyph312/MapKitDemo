@@ -12,13 +12,13 @@
     NSMutableArray *arrType;
 }
 
-- (id)initWithClickBlock:(ChangeMapTypeBlock)block{
+- (id) initWithArrayType:(NSMutableArray*) arrMapType andClickBlock:(ChangeMapTypeBlock)block{
     self = [super init];
     if (self) {
         _blockChangeType = block;
         _gTableView.dataSource = self;
         _gTableView.delegate = self;
-        arrType = [[NSMutableArray alloc] initWithObjects:@"Standard",@"Statellite",@"Hybrid", nil];
+        arrType = [[NSMutableArray alloc] initWithArray:arrMapType];
         _gTableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
         [_gTableView reloadData];
     }

@@ -16,6 +16,6 @@ typedef void (^ChangeMapTypeBlock) (NSInteger);
 @property (strong,nonatomic) ChangeMapTypeBlock blockChangeType;
 @property (nonatomic) BOOL isShow;
 
-- (id) initWithClickBlock:(ChangeMapTypeBlock)block; 
+- (id) initWithArrayType:(NSMutableArray*) arrMapType andClickBlock:(ChangeMapTypeBlock)block;
 
 @end

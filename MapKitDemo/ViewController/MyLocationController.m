@@ -10,6 +10,7 @@
 
 @interface MyLocationController (){
     ChangeMapType *changeMapTypeView;
+    NSMutableArray *arrType;
 }
 @end
 
@@ -18,13 +19,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    arrType = [[NSMutableArray alloc] initWithObjects:@"Standard",@"Statellite",@"Hybrid", nil];
     self.navigationController.navigationBar.translucent = NO;
     _gMapView.showsUserLocation = YES;
     _gMapView.delegate = self;
     changeMapTypeView = [[[NSBundle mainBundle] loadNibNamed:@"ChangeMapType" owner:self options:nil] lastObject];
-    changeMapTypeView = [changeMapTypeView initWithClickBlock:^(NSInteger row){
+    changeMapTypeView = [changeMapTypeView initWithArrayType:arrType andClickBlock:^(NSInteger row){
         [self changeTypeButtonClicked:nil];
         _gMapView.mapType = row;
+        [self.navigationItem.rightBarButtonItem setTitle:[arrType objectAtIndex:row]];
     }];
     NSDictionary *views = @{@"changeMapType":changeMapTypeView};
     [self.view addSubview:changeMapTypeView];

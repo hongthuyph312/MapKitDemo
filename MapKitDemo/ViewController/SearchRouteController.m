@@ -112,19 +112,19 @@
 #pragma mark MKMapViewDelegate
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
 {
-    MKCoordinateRegion region;
-    MKCoordinateSpan span;
-    span.latitudeDelta = 0.01;
-    span.longitudeDelta = 0.01;
-    
-    CLLocationCoordinate2D location;
-    location.latitude = userLocation.coordinate.latitude;
-    location.longitude = userLocation.coordinate.longitude;
-    
-    region.span = span;
-    region.center = location;
-    
-    [mapView setRegion:region animated:YES];
+//    MKCoordinateRegion region;
+//    MKCoordinateSpan span;
+//    span.latitudeDelta = 0.01;
+//    span.longitudeDelta = 0.01;
+//    
+//    CLLocationCoordinate2D location;
+//    location.latitude = userLocation.coordinate.latitude;
+//    location.longitude = userLocation.coordinate.longitude;
+//    
+//    region.span = span;
+//    region.center = location;
+//    
+//    [mapView setRegion:region animated:YES];
 }
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation

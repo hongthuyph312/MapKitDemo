@@ -17,13 +17,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    //21.007486,105.840736
+
     _gMapView.showsUserLocation = YES;
     _gMapView.delegate = self;
     
-    MKCoordinateSpan span = {0.05,0.05};
-    CLLocationCoordinate2D location = {21.007486,105.840736};
+    MKCoordinateSpan span = {0.02,0.02};
+    CLLocationCoordinate2D location = {21.002430,105.840025};
     
     MKCoordinateRegion region;
     region.span = span;
@@ -33,7 +32,7 @@
     // Add an annotation
     MKPointAnnotation *point = [[MKPointAnnotation alloc] init];
     point.coordinate = location;
-    point.title = @"Test";
+    point.title = [NSString stringWithFormat:@"Lat:%f - Long:%f",location.latitude,location.longitude];
     [_gMapView addAnnotation:point];
 }
 
@@ -42,23 +41,27 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
-{
-    if ([annotation isKindOfClass:[MKUserLocation class]]) {
-        return nil;
-    }
-    
-    static NSString * const identifier = @"MyCustomAnnotation";
-    MKAnnotationView *annotationView = [_gMapView dequeueReusableAnnotationViewWithIdentifier:identifier];
-    if (annotationView) {
-        annotationView.annotation = annotation;
-    }else
-    {
-        annotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier];
-    }
-    annotationView.image = [UIImage imageNamed:@"ico_place"];
-    return annotationView;
-}
+//- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
+//{
+//    if ([annotation isKindOfClass:[MKUserLocation class]]) {
+//        return nil;
+//    }
+//    
+//    static NSString * const identifier = @"MyCustomAnnotation";
+//    MKAnnotationView *annotationView = [_gMapView dequeueReusableAnnotationViewWithIdentifier:identifier];
+//    if (annotationView) {
+//        annotationView.annotation = annotation;
+//    }else
+//    {
+//        annotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier];
+//    }
+//    annotationView.image = [UIImage imageNamed:@"ico_place"];
+//    return annotationView;
+//}
+//- (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view
+//{
+//    
+//}
 
 /*
 #pragma mark - Navigation
